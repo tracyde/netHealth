@@ -39,7 +39,6 @@ func main() {
 	timeRefill := findSubmatch(timeRefillRegex, allowanceReq)
 	mbRefillAmount := findSubmatch(mbRefillAmountRegex, allowanceReq)
 
-	fmt.Printf("%s\n", allowanceReq)
 	fmt.Printf("Maximum Download Bank (mb): %s\n", mbBank)
 	fmt.Printf("Allowance Remaining (mb): %s\n", mbRemaining)
 	fmt.Printf("Allowance Remaining (percent): %s\n", pctRemaining)
@@ -55,4 +54,3 @@ func findSubmatch(re *regexp.Regexp, b []byte) (retByte []byte) {
 	retByte = matches[1]
 	return
 }
-
